@@ -32,16 +32,18 @@
         const password = passwordInput.value;
 
         if (loginId === "adminid" && password === "adminpass") {
+          document.getElementById("invalidCred").style.display = "none";
           document.getElementById("userLogin").style.display = "none";
           document.getElementById("adminLogin").style.display = "block";
         } else if (loginId === "userid" && password === "userpass") {
+          document.getElementById("invalidCred").style.display = "none";
           document.getElementById("adminLogin").style.display = "none";
           document.getElementById("userLogin").style.display = "block";
         }
           else{
             document.getElementById("adminLogin").style.display = "none";
             document.getElementById("userLogin").style.display = "none";
-          document.getElementById("invalidCred").style.display = "block";
+            document.getElementById("invalidCred").style.display = "block";
           }    
       }
     </script>
